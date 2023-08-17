@@ -1,0 +1,21 @@
+<?php
+function isPalindrome($number) {
+    $originalNumber = $number;
+    $reversedNumber = 0;
+    
+    while ($number > 0) {
+        $digit = $number % 10;
+        $reversedNumber = $reversedNumber * 10 + $digit;
+        $number = (int)($number / 10);
+    }
+    
+    return $originalNumber === $reversedNumber;
+}
+
+$number = 12321; // Replace this with the number you want to check
+if (isPalindrome($number)) {
+    echo "$number is a palindrome number.";
+} else {
+    echo "$number is not a palindrome number.";
+}
+?>
