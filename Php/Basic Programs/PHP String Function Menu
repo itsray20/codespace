@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>PHP String Function Menu</title>
+</head>
+<body>
+    <h1>PHP String Function Menu</h1>
+    <ul>
+        <li><a href="?function=stringLength">String Length</a></li>
+        <li><a href="?function=stringConcat">String Concatenation</a></li>
+        <li><a href="?function=stringCase">String Case Conversion</a></li>
+        <li><a href="?function=stringSubstring">Substring</a></li>
+        <li><a href="?function=stringReplace">String Replace</a></li>
+    </ul>
+
+    <?php
+    if (isset($_GET['function'])) {
+        $function = $_GET['function'];
+
+        switch ($function) {
+            case 'stringLength':
+                $str = "Hello, World!";
+                echo "Original String: $str<br>";
+                echo "String Length: " . strlen($str);
+                break;
+
+            case 'stringConcat':
+                $str1 = "Hello, ";
+                $str2 = "PHP!";
+                echo "String 1: $str1<br>";
+                echo "String 2: $str2<br>";
+                echo "Concatenated String: " . $str1 . $str2;
+                break;
+
+            case 'stringCase':
+                $str = "Hello, Php!";
+                echo "Original String: $str<br>";
+                echo "Uppercase: " . strtoupper($str) . "<br>";
+                echo "Lowercase: " . strtolower($str);
+                break;
+
+            case 'stringSubstring':
+                $str = "Hello, World!";
+                echo "Original String: $str<br>";
+                echo "Substring: " . substr($str, 7);
+                break;
+
+            case 'stringReplace':
+                $str = "Hello, World!";
+                echo "Original String: $str<br>";
+                echo "Replaced String: " . str_replace("World", "PHP", $str);
+                break;
+
+            default:
+                echo "Invalid function selected.";
+                break;
+        }
+    }
+    ?>
+</body>
+</html>
