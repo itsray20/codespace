@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>User Input and Validation</title>
+</head>
+<body>
+    <h1>User Input and Validation</h1>
+    <form method="post" action="">
+        <label for="username">Username:</label>
+        <input type="text" name="username" id="username">
+        <input type="submit" value="Submit">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        $username = $_POST["username"];
+
+        if (empty($username)) {
+            echo "Username is required.";
+        } else {
+            echo "Hello, $username!";
+        }
+    }
+    ?>
+</body>
+</html>
