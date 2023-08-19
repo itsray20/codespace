@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>File Upload Example</title>
+</head>
+<body>
+    <h1>File Upload Example</h1>
+    <form method="post" action="" enctype="multipart/form-data">
+        <label for="file">Choose a file:</label>
+        <input type="file" name="file" id="file">
+        <input type="submit" value="Upload">
+    </form>
+
+    <?php
+    if ($_SERVER["REQUEST_METHOD"] === "POST") {
+        if ($_FILES["file"]["error"] === UPLOAD_ERR_OK) {
+            $tempFile = $_FILES["file"]["tmp_name"];
+            $targetFile = "uploads/" . $_FILES["file"]["name"];
+            
+            if (move_uploaded_file($tempFile, $targetFile)) {
+                echo "File uploaded successfully.";
+            } else {
+                echo "Error uploading file.";
+            }
+        }
+    }
+    ?>
+</body>
+</html>
