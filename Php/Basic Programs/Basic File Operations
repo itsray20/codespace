@@ -1,0 +1,11 @@
+$inputFile = 'input.txt';
+$outputFile = 'output.txt';
+
+// Read data from input file
+$data = file_get_contents($inputFile);
+
+// Process data (e.g., convert to uppercase)
+$processedData = strtoupper($data);
+
+// Write processed data to output file
+file_put_contents($outputFile, $processedData);
