@@ -1,0 +1,13 @@
+$tasks = [];
+
+if ($_SERVER["REQUEST_METHOD"] == "POST") {
+    if (isset($_POST["addTask"])) {
+        $task = $_POST["task"];
+        array_push($tasks, $task);
+    } elseif (isset($_POST["removeTask"])) {
+        $taskIndex = $_POST["taskIndex"];
+        if (isset($tasks[$taskIndex])) {
+            unset($tasks[$taskIndex]);
+        }
+    }
+}
