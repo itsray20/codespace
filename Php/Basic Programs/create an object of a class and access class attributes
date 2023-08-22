@@ -1,0 +1,20 @@
+<?php
+//PHP program to create an object of a class and access class attributes.
+class Student
+{
+    //Attributes
+    public $id;
+    public $name;
+    public $per;
+}
+
+$S = new Student();
+
+$S->id = 101;
+$S->name = "Rohit Kohli";
+$S->per = 78.23;
+
+print ("Student Id  		  : " . $S->id . '<br>');
+print ("Student Name		  : " . $S->name . '<br>');
+print ("Student Percentage : " . $S->per . '<br>');
+?>
