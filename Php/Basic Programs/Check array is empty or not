@@ -1,0 +1,18 @@
+<?php
+    // array declaration
+    $array1 = array('hello', 'world');
+    $array2 = array();
+    
+    //checking whether arrays are empty or not
+    if (empty($array1)) {
+        echo "array1 is empty\n";
+    } else {
+        echo "array1 is not empty\n";
+    }
+    
+    if (empty($array2)) {
+        echo "array2 is empty\n";
+    } else {
+        echo "array2 is not empty\n";
+    }
+?>
