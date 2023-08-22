@@ -1,0 +1,32 @@
+<?php
+//PHP program to create multiple objects of a class and access class attributes
+class Student
+{
+    //Attributes
+    public $id;
+    public $name;
+    public $per;
+}
+
+$S1 = new Student();
+$S2 = new Student();
+
+$S1->id = 101;
+$S1->name = "Rohit Kohli";
+$S1->per = 78.23;
+
+$S2->id = 102;
+$S2->name = "Virat Sharma";
+$S2->per = 79.23;
+
+print ("Student1:" . '<br>');
+print ("--->Student Id  		  : " . $S1->id . '<br>');
+print ("--->Student Name		  : " . $S1->name . '<br>');
+print ("--->Student Percentage    : " . $S1->per . '<br>');
+
+print ("Student2:" . '<br>');
+print ("--->Student Id  		  : " . $S2->id . '<br>');
+print ("--->Student Name		  : " . $S2->name . '<br>');
+print ("--->Student Percentage    : " . $S2->per . '<br>');
+
+?>
