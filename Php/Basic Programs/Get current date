@@ -1,0 +1,6 @@
+
+<?php
+// Return current date from the remote server
+$today = date("d/m/Y");
+echo $today;
+?>
