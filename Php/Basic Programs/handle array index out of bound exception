@@ -1,0 +1,22 @@
+<?php
+//PHP program to demonstrate the Array index 
+//out of bound exception using exception handling.
+try
+{
+    $colors = array(
+        "Red",
+        "Green",
+        "Blue"
+    );
+    $index = 3;
+
+    if ($index >= count($colors)) throw new Exception("Array index out of bound");
+
+    printf("Array element: %s<br>", $colors[$index]);
+
+}
+catch(Exception $e)
+{
+    printf("Exception: %s", $e->getMessage());
+}
+?>
