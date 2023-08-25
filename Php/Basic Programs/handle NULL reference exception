@@ -1,0 +1,29 @@
+<?php
+//PHP program to demonstrate the NULL reference exception
+//using exception handling.
+class Sample
+{
+    public function PrintHello()
+    {
+        printf("Hello World<br>");
+    }
+}
+
+function GetObject()
+{
+    $obj = new Sample();
+    return $Obj;
+}
+try
+{
+    $obj = GetObject();
+
+    if ($obj == null) throw new Exception("Null reference exception");
+
+    $obj->PrintHello();
+}
+catch(Exception $e)
+{
+    printf("Exception: %s", $e->getMessage());
+}
+?>
