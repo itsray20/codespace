@@ -1,0 +1,56 @@
+<html>
+  <form action='supplierSubmit.php' method="post" enctype='multipart/form-data'>
+    <center>
+      <table>
+        <caption>
+          <font size='5'><b>Supplier Details</b></font>
+        </caption>
+        <tr>
+          <td><b>Supplier Id:</b></td>
+          <td><input type='text' name='sid' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Supplier Name:</b></td>
+          <td><input type='text' name='sn' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Firmname:</b></td>
+          <td><input type='text' name='fn' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Gender:</b></td>
+          <td>
+            <input type=radio name='gen' value="Male">Male&nbsp;&nbsp;
+            <input type=radio name='gen' value='Female'>Female
+          </td>
+        </tr>
+        <tr>
+          <td><b>DOB:</b></td>
+          <td><input type=date name='dob' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Amount Due:</b></td>
+          <td><input type='text' name='amtd' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Amount Paid:</b></td>
+          <td><input type='text' name='amtp' size=30></td>
+        </tr>
+        <tr>
+          <td><b>City:</b></td>
+          <td><input type='text' name='city' size=30></td>
+        </tr>
+        <tr>
+          <td><b>Photo:</b></td>
+          <td>
+            <input type='file' name='photo'>
+          </td>
+        </tr>
+        <tr>
+          <td><input type=submit></td>
+          <td><input type=reset></td>
+        </tr>
+      </table>
+    </center>
+  </form>
+</html>
