@@ -1,0 +1,30 @@
+<?php
+//Connection Variables
+$host = "localhost";
+$uname = "username";
+$pw = "password";
+$db = "DBtest";
+
+try {
+    $conn = new PDO("mysql:host=$host;dbname=$db", $uname, $pw);
+
+    // set error mode to exception
+    $conn->setAttribute(PDO::ATTR_ERRMODE, PDO::ERRMODE_EXCEPTION);
+
+    // SQL insert query
+    $sql = "INSERT INTO users (firstname, lastname, email)
+    VALUES ('John', 'Abraham', 'john@abraham.com')";
+
+    // use exec() because no results are returned
+    $conn->exec($sql);
+
+    echo "New record created successfully";
+}
+catch(PDOException $e) {
+    echo $sql . $e->getMessage();
+}
+
+//Set Connection state to null
+$conn = null;
+
+?>
