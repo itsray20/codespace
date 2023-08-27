@@ -1,0 +1,25 @@
+<?php
+//PHP program to demonstrate the json_encode() function 
+//with multi-dimensional array.
+$Emps = array(
+    array(
+        101,
+        "Amit",
+        5000
+    ) ,
+    array(
+        102,
+        "Rahul",
+        7000
+    ) ,
+    array(
+        103,
+        "Rohit",
+        8000
+    )
+);
+
+$jsonStr = json_encode($Emps);
+printf("Result: %s<br>", $jsonStr);
+
+?>
