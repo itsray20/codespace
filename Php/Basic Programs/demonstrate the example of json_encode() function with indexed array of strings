@@ -1,0 +1,12 @@
+<?php
+//PHP program to demonstrate the json_encode() 
+//function with indexed array of strings.
+$Countries = array(
+    "INDIA",
+    "AUSTRALIA",
+    "USA",
+    "RUSSIA"
+);
+$jsonStr = json_encode($Countries);
+printf("Result: %s<br>", $jsonStr);
+?>
