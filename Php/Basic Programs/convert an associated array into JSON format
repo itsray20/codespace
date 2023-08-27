@@ -1,0 +1,12 @@
+<?php
+//PHP program to convert an associated array
+//into JSON format.
+$Ids = array(
+    'Id1' => 101,
+    'Id2' => 102,
+    'Id3' => 103,
+    'Id4' => 104
+);
+$jsonStr = json_encode($Ids);
+printf("Json String is: %s<br>", $jsonStr);
+?>
