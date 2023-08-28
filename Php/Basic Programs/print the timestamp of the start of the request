@@ -1,0 +1,8 @@
+<?php
+//PHP program to print the timestamp 
+//of the start of the request.
+
+$requestTime = $_SERVER['REQUEST_TIME'];
+
+printf("Timestamp: %s<br>", $requestTime);
+?>
