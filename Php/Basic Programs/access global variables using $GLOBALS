@@ -1,0 +1,17 @@
+<?php
+//PHP program to demonstrate the use of 
+//$GLOBALS to access global variables.
+
+$num = 30;
+
+function sumNumber()
+{
+    $num = 20;
+    $res = 0;
+
+    $res = $GLOBALS['num'] + $num;
+    return $res;
+}
+
+printf("Sum is: %d<br>", sumNumber());
+?>
