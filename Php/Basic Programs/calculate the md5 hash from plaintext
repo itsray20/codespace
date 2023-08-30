@@ -1,0 +1,5 @@
+<?php
+//PHP program to calculate the md5 hash from plaintext.
+$plaintext = "www.includehelp.com";
+printf("Encrypted data: %s<br>", md5($plaintext));
+?>
