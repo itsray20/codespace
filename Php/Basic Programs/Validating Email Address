@@ -1,0 +1,19 @@
+<?php
+
+    $email = "info@includehelp.com";
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+         echo '"' . $email . ' " is valid'."\n";
+    }
+    else {
+         echo '"' . $email . ' " is Invalid'."\n";
+    }
+
+    $email = "inf at includehelp.com";
+    if (filter_var($email, FILTER_VALIDATE_EMAIL)) {
+         echo '"' . $email . ' " is valid'."\n";
+    }
+    else {
+         echo '"' . $email . ' " is Invalid'."\n";
+    }
+    
+?>
