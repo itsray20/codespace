@@ -1,0 +1,8 @@
+<?php
+//PHP program to print the IP address 
+//of a hosted web server.
+
+$IpAddress = $_SERVER['SERVER_ADDR'];
+
+printf("IP Address: %s<br>", $IpAddress);
+?>
