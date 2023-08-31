@@ -1,0 +1,30 @@
+<html>
+  <form action="bill.php">
+    <center>
+    <table>
+      <caption>
+        <font color='blue' size='6'>Select Your Product</font>
+      </caption>
+      <br><br>
+      <tr>
+        <td>Choose Product:</td>
+        <td>
+          <select name=prd>
+            <option>Product 1</option>
+            <option>Product 2</option>
+            <option>Product 3</option>
+            <option>Product 4</option>
+          </select>
+        </td>
+      <tr>
+        <td>Quantity:</td>
+        <td><input type=text name=qty></td>
+      </tr>
+      <tr>
+        <td><input type=submit></td>
+        <td><input type=reset></td>
+      </tr>
+    </table>
+    <center>
+  </form>
+</html>
